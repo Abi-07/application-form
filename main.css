@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6416e;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  width: 100%;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+div.container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+}
+
+/* form design */
+
+form {
+  text-align: center;
+  padding: 30px;
+}
+
+label {
+  display: none;
+  letter-spacing: 4px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+label.is-visible {
+  display: block;
+}
+
+label.label-heading p {
+  font-size: 14px;
+  color: white;
+}
+
+/* animation for the text to float up */
+
+label .label-text {
+  color: #fff;
+  cursor: text;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  -moz-transform: translateY(-34px);
+  -ms-transform: translateY(-34px);
+  -webkit-transform: translateY(-34px);
+  transform: translateY(-34px);
+  transition: all 0.3s;
+}
+
+/* remove the input box styling */
+label input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 200px;
+}
+
+/* once you click in the input the input width box animates */
+
+label input:focus {
+  max-width: 100%;
+  width: 400px;
+}
+
+/* the text floats up and turns white */
+
+label input:focus + .label-text {
+  color: #f0f0f0;
+  font-size: 13px;
+  margin-top: 10px;
+  -moz-transform: translateY(-74px);
+  -ms-transform: translateY(-74px);
+  -webkit-transform: translateY(-74px);
+  transform: translateY(-74px);
+}
+
+/* the text floats up during form validation */
+
+label input:valid + .label-text {
+  font-size: 13px;
+  -moz-transform: translateY(-74px);
+  -ms-transform: translateY(-74px);
+  -webkit-transform: translateY(-74px);
+  transform: translateY(-74px);
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
+/* button styling */
+
+button {
+  background: transparent;
+  color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 20px 75px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin: 15px 30px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+button:hover,
+button:focus {
+  background-color: white;
+  color: #333333;
+}
+
+select {
+  width: 240px;
+  font-size: 18px;
+  min-height: 40px;
+  padding: 5px 20px;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+button:hover,
+button:focus {
+  background-color: #e66caa;
+  color: #fff;
+  outline: none;
+}
+
+select.multiple {
+  min-height: 220px;
+}
+
+select.multiple option {
+  margin-top: 4%;
+}
+
+#validate {
+  color: #333333;
+  font-weight: 700;
+}
+
+i {
+  color: white;
+  cursor: pointer;
+}
+
+.fa-arrow-up:before {
+  position: absolute;
+  bottom: 22%;
+  right: 10%;
+}
+
+.fa-arrow-down:before {
+  position: absolute;
+  bottom: 22%;
+  right: 7%;
+}
+
+select[name='availability-days'] {
+  min-height: 100px;
+}
+
+label.label-heading {
+  display: block;
+  padding: 5px 20px;
+  font-size: 20px;
+  margin: 3%;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.nav-btn-div {
+  margin-top: 2rem;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.nav-button {
+  background: transparent;
+  color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  font-size: 1em;
+  letter-spacing: 2px;
+  padding: 5px 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+@media (max-width: 1024px) {
+  label.label-heading {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 670px) {
+  section {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+  }
+
+  label.label-heading {
+    font-size: 18px;
+    margin-bottom: 11%;
+  }
+
+  h1 {
+    padding: 30px;
+    text-align: center;
+    position: absolute;
+    top: 15%;
+  }
+
+  label input:focus {
+    width: 250px;
+  }
+
+  .fa-arrow-up:before {
+    bottom: 16%;
+    right: 16%;
+  }
+
+  .fa-arrow-down:before {
+    position: absolute;
+    bottom: 16%;
+    right: 7%;
+  }
+
+  .select.multiple {
+    min-height: 180px;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  /*  */
+}
