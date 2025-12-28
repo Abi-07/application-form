@@ -12,9 +12,9 @@ View the working implementation here: [CodePen Demo](https://codepen.io/abi_j07/
 
 ## 🖼️ Screenshots
 
-| Demo                                        |
-| ------------------------------------------- |
-| ![Screen Recording](screenshots/screen.gif) |
+| Desktop Demo                                  | Mobile Demo                                 |
+| --------------------------------------------- | ------------------------------------------- |
+| ![Desktop Recording](screenshots/desktop.gif) | ![Mobile Recording](screenshots/mobile.gif) |
 
 ---
 
